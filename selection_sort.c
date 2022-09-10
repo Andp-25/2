@@ -1,6 +1,11 @@
 #include <stdio.h>
 
-
+void swap(int *xp, int *yp)
+{
+    int temp = *xp;
+    *xp = *yp;
+    *yp = temp;
+}
 
 void selectionSort(int arr[], int n)
 {
@@ -19,6 +24,13 @@ void selectionSort(int arr[], int n)
            if(min_idx != i)
             swap(&arr[min_idx], &arr[i]);
     }
+}
+void printArray(int arr[], int size)
+{
+    int i;
+    for (i=0; i < size; i++)
+        printf("%d ", arr[i]);
+    printf("\n");
 }
 
 // Driver program to test above functions
