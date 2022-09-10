@@ -1,7 +1,12 @@
 // C program for implementation of Bubble sort
 #include <stdio.h>
 
-
+void swap(int* xp, int* yp)
+{
+    int temp = *xp;
+    *xp = *yp;
+    *yp = temp;
+}
 // A function to implement bubble sort
 void bubbleSort(int arr[], int n)
 {
@@ -14,7 +19,13 @@ void bubbleSort(int arr[], int n)
 				swap(&arr[j], &arr[j + 1]);
 }
 
-
+void printArray(int arr[], int size)
+{
+    int i;
+    for (i = 0; i < size; i++)
+        printf("%d ", arr[i]);
+    printf("\n");
+}
 
 // Driver program to test above functions
 int main()
